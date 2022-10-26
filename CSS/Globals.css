@@ -36,6 +36,13 @@ ul {
   width: var(--mainWidth);
   height: 100%; }
 
+@media only screen and (max-width: 700px) {
+  .main {
+    position: absolute;
+    top: var(--navWidth);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--navWidth)); } }
 a {
   color: inherit; }
 

@@ -25,14 +25,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      gap: clamp(1rem, 4vw, 4rem); }
+      font-size: clamp(0.8rem, 2vw, 1.2rem);
+      gap: clamp(2rem, 4vw, 4rem); }
       .contact .content .phone i {
-        font-size: clamp(1.5em, 2vw, 2em); }
+        font-size: clamp(1.25em, 2vw, 2em); }
       .contact .content .phone div {
         display: flex;
         flex-direction: column;
-        gap: clamp(1rem, 2vw, 1.5rem);
+        gap: clamp(0.5rem, 2vw, 1.5rem);
         font-weight: 300; }
         .contact .content .phone div p span:first-child {
           font-size: 1.2em;
@@ -50,15 +50,24 @@
 
 @media only screen and (max-width: 700px) {
   .contact {
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    padding: calc(1 * var(--padding)); }
     .contact .content {
       flex-direction: column;
       align-items: flex-start;
-      gap: 2rem; }
+      gap: 1.5rem; }
       .contact .content .desc {
         width: 100%; }
       .contact .content .phone {
         justify-content: flex-start;
-        width: 100%; } }
+        width: 100%; }
+        .contact .content .phone div {
+          flex: 1;
+          flex-direction: row; }
+          .contact .content .phone div p {
+            flex: 1;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto; } }
 
 /*# sourceMappingURL=Contact.css.map */

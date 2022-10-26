@@ -3,7 +3,7 @@
   height: 100vh;
   overflow: hidden;
   background: #fff;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +14,19 @@
   .about h4 {
     font-size: 1.25em;
     color: var(--accent);
-    margin-bottom: 2rem; }
+    margin-block: 0.25em 0.5em; }
   .about p {
+    text-align: center;
     line-height: 1.7; }
+
+@media only screen and (max-width: 700px) {
+  .about {
+    padding: calc(1 * var(--padding)); }
+    .about p {
+      text-align: justify;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.5;
+      hyphens: auto; } }
 
 /*# sourceMappingURL=About.css.map */

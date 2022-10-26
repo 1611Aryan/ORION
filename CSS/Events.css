@@ -7,7 +7,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  font-size: 1.5rem; }
+  font-size: clamp(1rem, 2vw, 1.5rem); }
   .events header {
     text-align: center;
     color: #fff; }
@@ -22,6 +22,54 @@
     width: 50%;
     height: 70%;
     background: #fff;
-    border-radius: 10px; }
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; }
+    .events main .wrapper {
+      --numOfEvents: 2;
+      --index: 0;
+      width: calc(100% * var(--numOfEvents));
+      height: 100%;
+      display: flex;
+      transition: transform 300ms ease-in-out;
+      transform: translateX(calc(100% / var(--numOfEvents) * -1 * var(--index))); }
+      .events main .wrapper .event {
+        width: calc(150% / var(--numOfEvents));
+        height: 100%;
+        overflow: hidden; }
+        .events main .wrapper .event img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          scale: 1.1;
+          filter: blur(1px); }
+    .events main .buttons {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .events main .buttons button {
+        height: 100%;
+        background: transparent;
+        border: 0;
+        padding: 0 1%;
+        cursor: pointer;
+        font-size: clamp(1.25rem, 2vw, 1.5rem);
+        font-weight: 900; }
+        .events main .buttons button i {
+          transition: all 200ms ease;
+          color: rgba(255, 255, 255, 0.5); }
+        .events main .buttons button:hover i {
+          scale: 1.2; }
+        .events main .buttons button:focus {
+          outline: 0; }
+
+@media only screen and (max-width: 700px) {
+  .events {
+    padding: calc(0.5 * var(--padding)); }
+    .events main {
+      width: 80%;
+      height: 60%; } }
 
 /*# sourceMappingURL=Events.css.map */

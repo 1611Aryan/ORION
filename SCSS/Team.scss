@@ -9,7 +9,7 @@
   align-items: center;
   flex-direction: column;
 
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   header {
     text-align: center;
     color: #fff;
@@ -29,5 +29,15 @@
     height: 70%;
     background: #fff;
     border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .team {
+    padding: calc(0.5 * var(--padding));
+    main {
+      width: 80%;
+      height: 60%;
+    }
   }
 }

@@ -19,14 +19,22 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
   h1 {
     z-index: 2;
     color: #fff;
-    font-size: 6rem;
+    font-size: clamp(3.5rem, 7vw, 6rem);
     text-align: center;
   }
+}
 
-  /* Note: backdrop-filter has minimal browser support */
+@media only screen and (max-width: 700px) {
+  .home {
+    padding: var(--padding);
+    h1 {
+      text-align: left;
+    }
+  }
 }
