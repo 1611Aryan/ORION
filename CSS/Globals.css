@@ -5,14 +5,16 @@
 
 :root {
   --padding: 2rem;
-  --fontContent: "Poppins", sans-serif;
-  --fontHeading: "Inter", sans-serif;
+  --fontContent: 'Poppins', sans-serif;
+  --fontHeading: 'Inter', sans-serif;
   --accent: #f04592;
   --navBG: #06283d;
   --activeLink: #47b5ff;
   --link: #ffffff;
   --navWidth: 8%;
-  --mainWidth: calc(100% - var(--navWidth)); }
+  --mainWidth: calc(100% - var(--navWidth));
+  --numOfSponsors: 6;
+  --numOfRows: calc((var(--numOfSponsors) / 4) + 1); }
 
 body {
   width: 100%;

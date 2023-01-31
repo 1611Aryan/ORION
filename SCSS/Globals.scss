@@ -6,8 +6,8 @@
 
 :root {
   --padding: 2rem;
-  --fontContent: "Poppins", sans-serif;
-  --fontHeading: "Inter", sans-serif;
+  --fontContent: 'Poppins', sans-serif;
+  --fontHeading: 'Inter', sans-serif;
 
   --accent: #f04592;
 
@@ -17,6 +17,9 @@
   --link: #ffffff;
   --navWidth: 8%;
   --mainWidth: calc(100% - var(--navWidth));
+
+  --numOfSponsors: 6;
+  --numOfRows: calc((var(--numOfSponsors) / 4) + 1);
 }
 
 body {
